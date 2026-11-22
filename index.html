@@ -1,0 +1,1416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2775.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;판타지 뮤지컬 《스파클링 개구리》 공식 디지털 프로그램북&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Gowun+Batang:wght@400;700&amp;family=Nanum+Myeongjo:wght@400;700;800&amp;family=Noto+Sans+KR:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--forest-deep: #0e2c26;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--forest-mid: #1a473c;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--forest-emerald: #26604f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--forest-leaf: #4d8559;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--sky-blue: #9ed3e6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--pastel-pink: #f4bed4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--pastel-yellow: #fdf2b8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--soft-gold: #e9c96b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ivory-paper: #fbf8f1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ivory-card: rgba(255, 253, 248, 0.92);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink-dark: #1c2e28;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink-muted: #50665e;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border-soft: rgba(38, 96, 79, 0.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow-book: 0 22px 55px rgba(10, 29, 25, 0.45);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Noto Sans KR', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--ink-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-image:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 18% 15%, rgba(158, 211, 230, 0.22), transparent 42%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 82% 22%, rgba(244, 190, 212, 0.20), transparent 45%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 50% 60%, rgba(253, 242, 184, 0.16), transparent 55%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(165deg, #0b241f 0%, #153c33 48%, #0e2c26 100%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 수채화 종이 질감 오버레이 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.paper-texture {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.32;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 반딧불이 &amp; 물방울 입자 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sparkles-layer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sparkle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: floatSparkle 8s ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes floatSparkle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0%, 100% { transform: translateY(0) scale(1); opacity: 0.35; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>50% { transform: translateY(-22px) scale(1.25); opacity: 0.9; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 상단 네비게이션 바 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.topbar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 50;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(12, 34, 29, 0.86);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(12px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(233, 201, 107, 0.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #f6f2e6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.brand-mini {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.96rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--pastel-yellow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.topbar-actions {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.09);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #f5f1e6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(233, 201, 107, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 11px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-nav:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(233, 201, 107, 0.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--soft-gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-nav.active-edit {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e9c96b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #142c25;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 메인 북 컨테이너 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.book-stage {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 920px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 22px auto 90px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow-book);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(233, 201, 107, 0.32);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: pageFadeIn 0.42s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes pageFadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { opacity: 0; transform: translateY(10px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 일반 내지 스타일 (파스텔 수채화 구름 + 아이보리 종이) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.inner-page {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: var(--ivory-paper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-image:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 12% 8%, rgba(158, 211, 230, 0.34), transparent 38%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 88% 14%, rgba(244, 190, 212, 0.32), transparent 40%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 20% 88%, rgba(182, 224, 192, 0.32), transparent 42%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 82% 85%, rgba(253, 242, 184, 0.45), transparent 45%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>url('bg.png');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-position: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 36px 26px 44px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.inner-page::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(252, 249, 242, 0.78);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.inner-content {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ================= PAGE 01: COVER (메인 포스터 중심) ================= */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-page {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, #0d2b24 0%, #164237 50%, #0d2b24 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fdfbf4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px 20px 36px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-poster-wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 560px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 18px 46px rgba(0, 0, 0, 0.55), 0 0 0 2px rgba(233, 201, 107, 0.38);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #143a30;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-poster-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: zoom-in;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.35s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-poster-img:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.012);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 포스터 파일이 로컬 폴더에 없을 때 표시되는 수채화 대체 커버 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.poster-fallback {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 46px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 50% 48%, rgba(253, 242, 184, 0.85) 0%, rgba(244, 190, 212, 0.55) 28%, rgba(158, 211, 230, 0.45) 48%, rgba(20, 62, 50, 0.96) 78%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(180deg, #10352b, #1d5444);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #16362d;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 520px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.poster-fallback.show { display: flex; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-cta-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 560px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(12, 34, 29, 0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(233, 201, 107, 0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.22em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--soft-gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.65rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fffdf5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover-meta {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #e2eee9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-open-book {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #f6e199 0%, #e4be58 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #132d26;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 26px rgba(233, 201, 107, 0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s, box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-open-book:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 14px 32px rgba(233, 201, 107, 0.5);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 섹션 공통 헤더 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px dashed rgba(38, 96, 79, 0.28);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-en {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.24em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-ko {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.65rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-desc {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--ink-muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 편지지 카드 (인사말, 연출의 말, 시놉시스) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--ivory-card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 24px rgba(22, 58, 48, 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-head {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(38, 96, 79, 0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avatar-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 76px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 92px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #d9eee7, #f5dce6);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(38, 96, 79, 0.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avatar-box img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: zoom-in;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-role {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.84rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-name {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.22rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #244f42;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.98rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #23352f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: pre-line;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.letter-sign {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.02rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 그리드 카드 (배우, 메이크업, 외부 스태프) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--ivory-card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 6px 18px rgba(18, 52, 43, 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-card:hover { transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-photo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>aspect-ratio: 3 / 4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(145deg, #d7ede6 0%, #f6dfea 55%, #fbf3cc 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-photo img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: zoom-in;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-info {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-role {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-name {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.profile-bio {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--ink-muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.45;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 스태프 그룹 리스트 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.staff-groups {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.staff-group-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--ivory-card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.staff-group-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Gowun Batang', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(38, 96, 79, 0.16);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.staff-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px dotted rgba(38, 96, 79, 0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.staff-item:last-child { border-bottom: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 오시는 길 지도 영역 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.map-frame {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f5f2e8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.map-frame img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: zoom-in;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.route-steps {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.route-step {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--ivory-card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.route-badge {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2px 9px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 하단 페이지 컨트롤 바 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bottom-bar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 50;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(12, 34, 29, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(12px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(233, 201, 107, 0.34);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #f8f4e8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-arrow {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--soft-gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-arrow:disabled { opacity: 0.3; cursor: default; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-indicator {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.1em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 72px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 모달 (목차, 이미지 확대, 편집 패널) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modal-backdrop {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(8, 22, 19, 0.82);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(6px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modal-backdrop.open { display: flex; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modal-panel {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--ivory-paper);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--ink-dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 560px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 86vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--soft-gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toc-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 11px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 7px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border-soft);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.93rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toc-item.current {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e6f3ee;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 편집 모드 툴바 &amp; 입력 스타일 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.edit-controls {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px dashed #b7ccc3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-mini {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.76rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 9px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--forest-emerald);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--forest-deep);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-mini.danger {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color: #c24b4b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #a62c2c;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.editable-field {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline: 1px dashed rgba(38, 96, 79, 0.55);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* 라이트박스 이미지 확대 */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lightbox-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 94vw;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 88vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.inner-page { padding: 26px 16px 36px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.sec-ko { font-size: 1.4rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.letter-head { flex-direction: column; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.profile-grid { grid-template-columns: repeat(2, 1fr); gap: 11px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="paper-texture"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sparkles-layer" id="sparklesLayer"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 상단 바 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header class="topbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="brand-mini" onclick="goToPage(0)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;🐸&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;스파클링 개구리&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="topbar-actions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn-nav" onclick="goToPage(0)"&gt;표지&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn-nav" onclick="openToc()"&gt;목차&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn-nav" id="editToggleBtn" onclick="toggleEditMode()"&gt;편집&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn-nav" onclick="openDataModal()"&gt;백업/복원&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 메인 콘텐츠 스테이지 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="book-stage" id="bookStage"&gt;&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 하단 페이지 이동 바 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav class="bottom-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="page-arrow" id="prevBtn" onclick="prevPage()"&gt;◀ 이전&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="page-indicator" id="pageIndicator"&gt;01 / 11&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="page-arrow" id="nextBtn" onclick="nextPage()"&gt;다음 ▶&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 목차 모달 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-backdrop" id="tocModal" onclick="if(event.target===this) closeToc()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="modal-panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 style="font-family:'Gowun Batang',serif;font-size:1.25rem;color:var(--forest-deep);"&gt;프로그램북 목차&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-mini" onclick="closeToc()"&gt;닫기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="tocList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 데이터 백업/복원 모달 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-backdrop" id="dataModal" onclick="if(event.target===this) closeDataModal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="modal-panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 style="font-family:'Gowun Batang',serif;font-size:1.2rem;"&gt;데이터 저장 및 불러오기&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-mini" onclick="closeDataModal()"&gt;닫기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="font-size:0.86rem;color:var(--ink-muted);line-height:1.6;margin-bottom:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>편집 모드에서 수정한 인사말, 사진, 배우·스태프 명단을 JSON 파일로 내려받거나 다시 불러올 수 있습니다.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;gap:8px;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-mini" onclick="exportJson()"&gt;JSON 파일로 내보내기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>JSON 파일 불러오기</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="file" accept=".json" style="display:none" onchange="importJson(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-mini danger" onclick="resetAllData()"&gt;초기 상태로 되돌리기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 이미지 확대 라이트박스 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-backdrop" id="lightboxModal" onclick="this.classList.remove('open')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="lightboxImg" class="lightbox-img" src="" alt="확대 이미지"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const STORAGE_KEY = 'sparkling_frog_program_v3_poster';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const PAGES = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'cover', num: '01', en: 'COVER', ko: '메인 표지' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'greetings', num: '02', en: 'GREETINGS', ko: '인사말' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'director', num: '03', en: "DIRECTOR'S NOTE", ko: '연출의 말' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'synopsis', num: '04', en: 'SYNOPSIS', ko: '시놉시스' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'cast', num: '05', en: 'CAST', ko: '출연 배우' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'creative', num: '06', en: 'CREATIVE TEAM', ko: '전체 스태프' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'makeup', num: '07', en: 'MAKEUP TEAM', ko: '메이크업팀' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'external', num: '08', en: 'EXTERNAL CREATIVE TEAM', ko: '외부 스태프' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'thanks', num: '09', en: 'SPECIAL THANKS', ko: '도움을 주신 분들' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'location', num: '10', en: 'LOCATION', ko: '오시는 길' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'acknowledgements', num: '11', en: 'ACKNOWLEDGEMENTS', ko: '감사의 말씀' }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const DEFAULT_DATA = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cover: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>posterImg: 'poster.jpg',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subtitle: 'FANTASY MUSICAL · SPARKLING FROG',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title: '판타지 뮤지컬 《스파클링 개구리》',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>creditsTop: '작 김인하 · 작곡 이경',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>schedule: '2026. 12. 04 FRI – 12. 06 SUN (평일 19:00 / 토,일 16:00)',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>venue: '영산대학교 성심오디토리움',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>notice: '본 프로그램은 부산앵커센터 및 부산앵커사업단의 지원으로 운영되었습니다. · 문의 010 8328 4182 · 전석 무료'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>greetings: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'g1', role: '지도교수', name: '강희정 교수님', title: '인사말 제목을 입력해 주세요', body: '강희정 교수님의 인사말 본문을 입력하는 공간입니다.\n상단 [편집] 버튼을 누르시면 내용을 직접 작성하실 수 있습니다.', sign: '강희정 드림', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'g2', role: '지도교수', name: '유화정 교수님', title: '인사말 제목을 입력해 주세요', body: '유화정 교수님의 인사말 본문을 입력하는 공간입니다.', sign: '유화정 드림', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'g3', role: '지도교수', name: '이영준 교수님', title: '인사말 제목을 입력해 주세요', body: '이영준 교수님의 인사말 본문을 입력하는 공간입니다.', sign: '이영준 드림', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'g4', role: '지도교수', name: '이연기 교수님', title: '인사말 제목을 입력해 주세요', body: '이연기 교수님의 인사말 본문을 입력하는 공간입니다.', sign: '이연기 드림', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'g5', role: '영산대학교', name: '총장님 인사말', title: '인사말 제목을 입력해 주세요', body: '총장님의 축사 및 인사말 본문을 입력하는 공간입니다.', sign: '영산대학교 총장', photo: '' }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>directors: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'd1', role: '연출', name: '김인하', title: '연출의 말', body: '작품을 준비하며 관객분들께 전하고 싶은 연출의 이야기를 입력해 주세요.', sign: '연출 김인하', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'd2', role: '학생 연출 / 조연출', name: '박하윤', title: '학생 연출의 말', body: '함께 땀 흘리며 무대를 만들어간 학생 연출의 이야기를 입력해 주세요.', sign: '학생 연출 올림', photo: '' }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>synopsis: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>intro: '신비로운 푸른 숲과 반짝이는 연못을 배경으로 펼쳐지는 판타지 뮤지컬 《스파클링 개구리》의 작품 소개 영역입니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>story: '전체 줄거리 내용을 입력해 주세요.\n\n문단과 문단 사이에 충분한 여백을 두어 모바일에서도 편안하게 읽을 수 있도록 구성되었습니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message: '작품이 관객에게 전하고자 하는 핵심 메시지를 입력해 주세요.'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cast: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c1', name: '남동훈', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c2', name: '오경택', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c3', name: '김난현', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c4', name: '최강휘', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c5', name: '천정훈', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c6', name: '박현영', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c7', name: '차정은', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c8', name: '손호영', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c9', name: '최시은', role: '배역명 입력', bio: '', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'c10', name: '이창민', role: '배역명 입력', bio: '', photo: '' }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>creativeGroups: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '연출 및 조연출', members: [{ role: '작 / 연출', name: '김인하' }, { role: '조연출', name: '박하윤' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '음악 및 작곡', members: [{ role: '작곡', name: '이경' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '안무', members: [{ role: '안무', name: '성함 입력' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '무대', members: [{ role: '무대감독', name: '최지환' }, { role: '무대디자인', name: '손현성' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '조명', members: [{ role: '조명디자인', name: '이영준' }, { role: '조명', name: '전성욱' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '음향', members: [{ role: '음향감독', name: '이호원' }, { role: '음향', name: '도혜슴' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '영상', members: [{ role: '영상감독', name: '손희승' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '의상', members: [{ role: '의상', name: '권진경' }, { role: '의상', name: '박현영' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '소품', members: [{ role: '소품', name: '차정은' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '기획 및 홍보', members: [{ role: '기획', name: '노경민' }, { role: '홍보', name: '김상화' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '무대 진행', members: [{ role: '무대 진행', name: '성함 입력' }] },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ group: '기타 공연 제작 인원', members: [{ role: '지도교수', name: '유화정 · 강희정 · 이연기 · 이영준' }] }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>makeup: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>intro: '무대 위 배우들의 캐릭터와 신비로운 숲속 판타지 분위기를 완성하는 메이크업팀을 소개합니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>groupPhoto: '',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>members: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ id: 'm1', name: '팀원 이름 입력', role: '담당 업무 입력', photo: '' },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ id: 'm2', name: '팀원 이름 입력', role: '담당 업무 입력', photo: '' }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>externalStaff: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{ id: 'e1', name: '외부 스태프 이름', org: '소속 / 담당 분야 입력', bio: '간단한 소개를 입력해 주세요.', photo: '' }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>specialThanks: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message: '뮤지컬 《스파클링 개구리》가 무대에 오르기까지 아낌없는 응원과 도움을 주신 모든 분들께 진심으로 감사드립니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>list: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ org: '주최 / 주관', name: '영산대학교 연기공연예술전공' },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ org: '주최 / 주관', name: '영산대학교 부산앵커사업단 · 부산앵커센터' },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ org: '후원', name: '영산대학교 사회공헌센터' }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>location: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>venueName: '영산대학교 성심오디토리움 (M동 1층)',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>address: '경상남도 양산시 주남로 288 영산대학교 양산캠퍼스 M동 1층',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mapImg: 'map.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>guideSummary: '영산대역 및 영산대학교 정문으로 진입하신 후, 정문에서 바로 보이는 중앙 길을 따라 직진하시면 M동 1층 성심오디토리움에 도착합니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>traffic: '문의번호: 010 8328 4182 · 본 공연은 무료 공연으로 진행됩니다.'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>acknowledgements: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>title: '함께해 주신 모든 분들께 감사드립니다',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body: '무대 위에서 빛난 출연 배우들과 보이지 않는 곳에서 땀 흘린 전체 스태프, 메이크업팀, 외부 스태프, 지도교수님, 그리고 객석을 채워주신 관객 여러분 덕분에 《스파클링 개구리》의 숲이 완성되었습니다.\n\n오늘 이 공연이 여러분의 마음속에도 작은 반짝임으로 오래 기억되길 바랍니다.',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sign: '판타지 뮤지컬 《스파클링 개구리》 제작진 일동'</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let appData = loadData();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentPage = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let editMode = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function loadData() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const saved = localStorage.getItem(STORAGE_KEY);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DEFAULT_DATA));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return JSON.parse(JSON.stringify(DEFAULT_DATA));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function saveData() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alert('이미지 용량이 커서 브라우저 저장 한도를 초과했습니다. 조금 더 작은 이미지로 올려주세요.');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function createSparkles() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const layer = document.getElementById('sparklesLayer');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const colors = ['#fdf2b8', '#f4bed4', '#9ed3e6', '#ffffff'];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; 24; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const s = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.className = 'sparkle';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const size = 4 + Math.random() * 8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.width = size + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.height = size + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.left = Math.random() * 100 + '%';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.top = Math.random() * 100 + '%';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.background = colors[i % colors.length];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.boxShadow = `0 0 ${size * 2}px ${colors[i % colors.length]}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.animationDelay = (Math.random() * 6) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>s.style.animationDuration = (6 + Math.random() * 5) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>layer.appendChild(s);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleImageUpload(event, callback) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const file = event.target.files[0];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!file) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const reader = new FileReader();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>reader.onload = function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>callback(e.target.result);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveData();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>reader.readAsDataURL(file);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openLightbox(src) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!src) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('lightboxImg').src = src;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('lightboxModal').classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function bindEditable(el, setter) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!editMode) return '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `contenteditable="true" class="editable-field" onblur="(${setter})(this.innerText)"`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderPage() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const stage = document.getElementById('bookStage');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const page = PAGES[currentPage];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('pageIndicator').textContent = `${page.num} / 11`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('prevBtn').disabled = currentPage === 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('nextBtn').disabled = currentPage === PAGES.length - 1;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (page.id === 'cover') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderCover();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'greetings') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderGreetings();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'director') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderDirectors();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'synopsis') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderSynopsis();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'cast') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderCast();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'creative') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderCreative();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'makeup') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderMakeup();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'external') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderExternal();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'thanks') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderThanks();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'location') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderLocation();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (page.id === 'acknowledgements') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stage.innerHTML = renderAcknowledgements();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderCover() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const c = appData.cover;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card cover-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cover-poster-wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img</p>
+<p class="p1"><span class="Apple-converted-space">              </span>id="mainPosterImg"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>class="cover-poster-img"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>src="${c.posterImg}"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>alt="뮤지컬 스파클링 개구리 공식 포스터"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>onclick="openLightbox(this.src)"</p>
+<p class="p1"><span class="Apple-converted-space">              </span>onerror="this.style.display='none'; document.getElementById('posterFallback').classList.add('show');"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="posterFallback" class="poster-fallback"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="font-size:0.85rem;color:#fdf2b8;background:rgba(13,43,36,0.65);padding:6px 14px;border-radius:999px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>같은 폴더에 poster.jpg를 넣거나 [편집]에서 포스터를 올려주세요</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="font-family:'Gowun Batang',serif;font-size:2.4rem;font-weight:700;color:#11362c;"&gt;스파클링 개구리&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:8px;font-weight:600;"&gt;작 김인하 · 작곡 이경&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="font-size:0.9rem;font-weight:700;background:rgba(255,255,255,0.75);padding:10px 18px;border-radius:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>2026. 12. 04 FRI – 12. 06 SUN · 영산대학교 성심오디토리움</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-bottom:16px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label class="btn-nav" style="cursor:pointer;display:inline-block;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>🖼️ 메인 포스터 사진 교체하기</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.cover.posterImg = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>` : ''}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cover-cta-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cover-subtitle"&gt;${c.subtitle}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="cover-title" ${editMode ? 'contenteditable="true" onblur="appData.cover.title=this.innerText;saveData()"' : ''}&gt;${c.title}&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cover-meta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div ${editMode ? 'contenteditable="true" onblur="appData.cover.schedule=this.innerText;saveData()"' : ''}&gt;📅 ${c.schedule}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div ${editMode ? 'contenteditable="true" onblur="appData.cover.venue=this.innerText;saveData()"' : ''}&gt;📍 ${c.venue}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="font-size:0.8rem;color:#c9dfd7;margin-top:6px;" ${editMode ? 'contenteditable="true" onblur="appData.cover.notice=this.innerText;saveData()"' : ''}&gt;${c.notice}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn-open-book" onclick="nextPage()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span&gt;📖 프로그램북 펼쳐보기&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderGreetings() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const itemsHtml = appData.greetings.map((g, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="avatar-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${g.photo ? `&lt;img src="${g.photo}" alt="${g.name}" onclick="openLightbox('${g.photo}')"&gt;` : `&lt;span&gt;공식 사진&lt;br&gt;자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-role" ${editMode ? `contenteditable="true" onblur="appData.greetings[${idx}].role=this.innerText;saveData()"` : ''}&gt;${g.role}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-name" ${editMode ? `contenteditable="true" onblur="appData.greetings[${idx}].name=this.innerText;saveData()"` : ''}&gt;${g.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="display:inline-block;margin-top:6px;cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>사진 등록</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.greetings[${idx}].photo = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-title" ${editMode ? `contenteditable="true" onblur="appData.greetings[${idx}].title=this.innerText;saveData()"` : ''}&gt;${g.title}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-body" ${editMode ? `contenteditable="true" onblur="appData.greetings[${idx}].body=this.innerText;saveData()"` : ''}&gt;${g.body}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-sign" ${editMode ? `contenteditable="true" onblur="appData.greetings[${idx}].sign=this.innerText;saveData()"` : ''}&gt;${g.sign}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 02 · GREETINGS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;인사말&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;공연을 응원해 주신 교수님과 총장님의 말씀입니다.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${itemsHtml}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderDirectors() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const itemsHtml = appData.directors.map((d, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="avatar-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${d.photo ? `&lt;img src="${d.photo}" alt="${d.name}" onclick="openLightbox('${d.photo}')"&gt;` : `&lt;span&gt;연출 사진&lt;br&gt;자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-role" ${editMode ? `contenteditable="true" onblur="appData.directors[${idx}].role=this.innerText;saveData()"` : ''}&gt;${d.role}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-name" ${editMode ? `contenteditable="true" onblur="appData.directors[${idx}].name=this.innerText;saveData()"` : ''}&gt;${d.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="display:inline-block;margin-top:6px;cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>사진 등록</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.directors[${idx}].photo = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-title" ${editMode ? `contenteditable="true" onblur="appData.directors[${idx}].title=this.innerText;saveData()"` : ''}&gt;${d.title}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-body" ${editMode ? `contenteditable="true" onblur="appData.directors[${idx}].body=this.innerText;saveData()"` : ''}&gt;${d.body}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="letter-sign" ${editMode ? `contenteditable="true" onblur="appData.directors[${idx}].sign=this.innerText;saveData()"` : ''}&gt;${d.sign}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 03 · DIRECTOR'S NOTE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;연출의 말&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;무대를 빚어낸 연출진의 진심을 전합니다.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${itemsHtml}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderSynopsis() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const s = appData.synopsis;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 04 · SYNOPSIS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;시놉시스&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;작품 소개 및 전체 줄거리&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-title"&gt;작품 소개&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" ${editMode ? 'contenteditable="true" onblur="appData.synopsis.intro=this.innerText;saveData()"' : ''}&gt;${s.intro}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-title"&gt;전체 줄거리&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" ${editMode ? 'contenteditable="true" onblur="appData.synopsis.story=this.innerText;saveData()"' : ''}&gt;${s.story}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-title"&gt;작품이 전하는 메시지&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" ${editMode ? 'contenteditable="true" onblur="appData.synopsis.message=this.innerText;saveData()"' : ''}&gt;${s.message}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderCast() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const cards = appData.cast.map((c, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="profile-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${c.photo ? `&lt;img src="${c.photo}" alt="${c.name}" onclick="openLightbox('${c.photo}')"&gt;` : `&lt;span&gt;배우 프로필&lt;br&gt;자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-role" ${editMode ? `contenteditable="true" onblur="appData.cast[${idx}].role=this.innerText;saveData()"` : ''}&gt;${c.role}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-name" ${editMode ? `contenteditable="true" onblur="appData.cast[${idx}].name=this.innerText;saveData()"` : ''}&gt;${c.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${(c.bio || editMode) ? `&lt;div class="profile-bio" ${editMode ? `contenteditable="true" onblur="appData.cast[${idx}].bio=this.innerText;saveData()"` : ''}&gt;${c.bio || '간단 소개(선택)'}&lt;/div&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="edit-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>사진</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.cast[${idx}].photo = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini danger" onclick="appData.cast.splice(${idx},1);saveData();renderPage()"&gt;삭제&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 05 · CAST&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;전체 배우 프로필 및 명단&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;사진을 누르면 크게 보실 수 있습니다.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-grid"&gt;${cards}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="text-align:center;margin-top:18px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini" onclick="appData.cast.push({id:'c'+Date.now(),name:'새 배우 이름',role:'배역 입력',bio:'',photo:''});saveData();renderPage()"&gt;+ 배우 추가하기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderCreative() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const groupsHtml = appData.creativeGroups.map((g, gIdx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="staff-group-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="staff-group-title"&gt;${g.group}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${g.members.map((m, mIdx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="staff-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span style="color:var(--ink-muted);font-size:0.85rem;" ${editMode ? `contenteditable="true" onblur="appData.creativeGroups[${gIdx}].members[${mIdx}].role=this.innerText;saveData()"` : ''}&gt;${m.role}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span style="font-weight:600;" ${editMode ? `contenteditable="true" onblur="appData.creativeGroups[${gIdx}].members[${mIdx}].name=this.innerText;saveData()"` : ''}&gt;${m.name}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${editMode ? `&lt;button class="btn-mini danger" onclick="appData.creativeGroups[${gIdx}].members.splice(${mIdx},1);saveData();renderPage()"&gt;×&lt;/button&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>`).join('')}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn-mini" style="margin-top:8px;width:100%;" onclick="appData.creativeGroups[${gIdx}].members.push({role:'역할',name:'이름'});saveData();renderPage()"&gt;+ 인원 추가&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 06 · CREATIVE TEAM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;전체 스태프 명단&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;공연 제작을 함께한 분야별 스태프입니다.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="staff-groups"&gt;${groupsHtml}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderMakeup() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const mk = appData.makeup;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const membersHtml = mk.members.map((m, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="profile-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${m.photo ? `&lt;img src="${m.photo}" alt="${m.name}" onclick="openLightbox('${m.photo}')"&gt;` : `&lt;span&gt;팀원 프로필&lt;br&gt;자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-role" ${editMode ? `contenteditable="true" onblur="appData.makeup.members[${idx}].role=this.innerText;saveData()"` : ''}&gt;${m.role}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-name" ${editMode ? `contenteditable="true" onblur="appData.makeup.members[${idx}].name=this.innerText;saveData()"` : ''}&gt;${m.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="edit-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>사진</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.makeup.members[${idx}].photo = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini danger" onclick="appData.makeup.members.splice(${idx},1);saveData();renderPage()"&gt;삭제&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 07 · MAKEUP TEAM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;메이크업팀&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;✨ 수채화 빛깔과 분장으로 판타지 무대를 완성하는 메이크업팀&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" ${editMode ? 'contenteditable="true" onblur="appData.makeup.intro=this.innerText;saveData()"' : ''}&gt;${mk.intro}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="margin-top:16px;border-radius:12px;overflow:hidden;background:#eef5f1;min-height:160px;display:flex;align-items:center;justify-content:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>${mk.groupPhoto ? `&lt;img src="${mk.groupPhoto}" style="width:100%;max-height:360px;object-fit:cover;cursor:zoom-in;" onclick="openLightbox('${mk.groupPhoto}')"&gt;` : `&lt;span style="color:var(--ink-muted);font-size:0.88rem;"&gt;메이크업팀 전체 단체 사진 자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:10px;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>단체 사진 등록</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.makeup.groupPhoto = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-grid"&gt;${membersHtml}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="text-align:center;margin-top:16px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini" onclick="appData.makeup.members.push({id:'m'+Date.now(),name:'팀원 이름',role:'담당 업무',photo:''});saveData();renderPage()"&gt;+ 메이크업팀원 추가&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderExternal() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const cards = appData.externalStaff.map((e, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="profile-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${e.photo ? `&lt;img src="${e.photo}" alt="${e.name}" onclick="openLightbox('${e.photo}')"&gt;` : `&lt;span&gt;외부 스태프&lt;br&gt;자리표시자&lt;/span&gt;`}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="profile-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-role" ${editMode ? `contenteditable="true" onblur="appData.externalStaff[${idx}].org=this.innerText;saveData()"` : ''}&gt;${e.org}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-name" ${editMode ? `contenteditable="true" onblur="appData.externalStaff[${idx}].name=this.innerText;saveData()"` : ''}&gt;${e.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-bio" ${editMode ? `contenteditable="true" onblur="appData.externalStaff[${idx}].bio=this.innerText;saveData()"` : ''}&gt;${e.bio}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="edit-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>사진</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.externalStaff[${idx}].photo = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini danger" onclick="appData.externalStaff.splice(${idx},1);saveData();renderPage()"&gt;삭제&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 08 · EXTERNAL CREATIVE TEAM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;외부 스태프&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;전문성과 열정으로 힘을 보태주신 외부 참여 스태프입니다.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="profile-grid"&gt;${cards}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="text-align:center;margin-top:16px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini" onclick="appData.externalStaff.push({id:'e'+Date.now(),name:'이름 입력',org:'소속/분야',bio:'소개 입력',photo:''});saveData();renderPage()"&gt;+ 외부 스태프 추가&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderThanks() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const t = appData.specialThanks;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 09 · SPECIAL THANKS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;도움을 주신 분들&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" ${editMode ? 'contenteditable="true" onblur="appData.specialThanks.message=this.innerText;saveData()"' : ''}&gt;${t.message}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${t.list.map((item, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="staff-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span style="color:var(--forest-emerald);font-weight:600;" ${editMode ? `contenteditable="true" onblur="appData.specialThanks.list[${idx}].org=this.innerText;saveData()"` : ''}&gt;${item.org}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span style="font-weight:700;" ${editMode ? `contenteditable="true" onblur="appData.specialThanks.list[${idx}].name=this.innerText;saveData()"` : ''}&gt;${item.name}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>${editMode ? `&lt;button class="btn-mini danger" onclick="appData.specialThanks.list.splice(${idx},1);saveData();renderPage()"&gt;삭제&lt;/button&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>`).join('')}</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-mini" style="margin-top:10px;" onclick="appData.specialThanks.list.push({org:'소속/직함',name:'성함 또는 기관명'});saveData();renderPage()"&gt;+ 명단 추가&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderLocation() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const loc = appData.location;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 10 · LOCATION&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;오시는 길&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="sec-desc"&gt;영산대학교 성심오디토리움 안내&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="map-frame"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="${loc.mapImg}" alt="영산대학교 오시는 길 안내 지도" onclick="openLightbox(this.src)" onerror="this.style.display='none'; document.getElementById('mapSvgFallback').style.display='block';"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;svg id="mapSvgFallback" style="display:none;width:100%;height:auto;" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;rect width="800" height="340" fill="#f7f4e8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;path d="M 80 120 Q 320 150 580 210" stroke="#f28c52" stroke-width="14" fill="none" stroke-linecap="round"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;rect x="40" y="95" width="110" height="44" rx="18" fill="#e2f2f8" stroke="#4d8559" stroke-width="2"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;text x="95" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#17382f"&gt;영산대역&lt;/text&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;rect x="180" y="75" width="145" height="54" rx="22" fill="#fbf3d5" stroke="#8a7954" stroke-width="2"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;text x="252" y="107" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3d35"&gt;영산대학교 정문&lt;/text&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;rect x="520" y="150" width="230" height="90" rx="22" fill="#f9d8d6" stroke="#c86b68" stroke-width="2"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;text x="635" y="190" text-anchor="middle" font-size="17" font-weight="bold" fill="#2a2424"&gt;M동 1층 성심오디토리움&lt;/text&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;text x="635" y="216" text-anchor="middle" font-size="13" fill="#5e4b4b"&gt;정문에서 직진 도보 이동&lt;/text&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>${editMode ? `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="text-align:center;margin-bottom:14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="btn-mini" style="cursor:pointer;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>🗺️ 오시는 길 지도 이미지 교체</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="file" accept="image/*" style="display:none" onchange="handleImageUpload(event, (url)=&gt;{ appData.location.mapImg = url; })"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>` : ''}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-title" ${editMode ? 'contenteditable="true" onblur="appData.location.venueName=this.innerText;saveData()"' : ''}&gt;📍 ${loc.venueName}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="font-size:0.93rem;margin-bottom:12px;" ${editMode ? 'contenteditable="true" onblur="appData.location.address=this.innerText;saveData()"' : ''}&gt;${loc.address}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="route-steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="route-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="route-badge"&gt;STEP 01&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-weight:700;margin-bottom:4px;"&gt;영산대역 · 정문 진입&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-size:0.85rem;color:var(--ink-muted);"&gt;영산대학교 정문으로 들어오시면 캠퍼스 중앙 보행로가 이어집니다.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="route-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="route-badge"&gt;STEP 02&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-weight:700;margin-bottom:4px;"&gt;중앙 길 따라 직진&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-size:0.85rem;color:var(--ink-muted);"&gt;정문에서 바로 보이는 큰 길을 따라 안쪽으로 직진합니다.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="route-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="route-badge"&gt;STEP 03&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-weight:700;margin-bottom:4px;"&gt;M동 1층 성심오디토리움&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div style="font-size:0.85rem;color:var(--ink-muted);"&gt;M동 건물 1층 로비를 통해 성심오디토리움 공연장으로 입장합니다.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p style="margin-top:14px;font-size:0.88rem;color:var(--forest-emerald);font-weight:600;" ${editMode ? 'contenteditable="true" onblur="appData.location.traffic=this.innerText;saveData()"' : ''}&gt;${loc.traffic}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderAcknowledgements() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ack = appData.acknowledgements;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="page-card inner-page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="inner-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="sec-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="sec-en"&gt;PAGE 11 · ACKNOWLEDGEMENTS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h2 class="sec-ko"&gt;감사의 말씀&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="letter-card" style="text-align:center;padding:34px 24px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="font-size:2rem;margin-bottom:10px;"&gt;✨🐸🌿&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-title" style="font-size:1.25rem;" ${editMode ? 'contenteditable="true" onblur="appData.acknowledgements.title=this.innerText;saveData()"' : ''}&gt;${ack.title}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-body" style="max-width:600px;margin:16px auto;" ${editMode ? 'contenteditable="true" onblur="appData.acknowledgements.body=this.innerText;saveData()"' : ''}&gt;${ack.body}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="letter-sign" style="text-align:center;margin-top:24px;" ${editMode ? 'contenteditable="true" onblur="appData.acknowledgements.sign=this.innerText;saveData()"' : ''}&gt;${ack.sign}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="margin-top:28px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn-open-book" onclick="goToPage(0)"&gt;첫 페이지(표지)로 돌아가기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function goToPage(idx) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (idx &lt; 0 || idx &gt;= PAGES.length) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentPage = idx;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>closeToc();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function nextPage() { goToPage(currentPage + 1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function prevPage() { goToPage(currentPage - 1); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openToc() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const list = document.getElementById('tocList');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>list.innerHTML = PAGES.map((p, i) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="toc-item ${i === currentPage ? 'current' : ''}" onclick="goToPage(${i})"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;&lt;strong&gt;${p.num}.&lt;/strong&gt; ${p.ko}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span style="font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--ink-muted);"&gt;${p.en}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('tocModal').classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeToc() { document.getElementById('tocModal').classList.remove('open'); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleEditMode() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>editMode = !editMode;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btn = document.getElementById('editToggleBtn');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.classList.toggle('active-edit', editMode);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.textContent = editMode ? '편집 완료' : '편집';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function openDataModal() { document.getElementById('dataModal').classList.add('open'); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function closeDataModal() { document.getElementById('dataModal').classList.remove('open'); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function exportJson() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const blob = new Blob([JSON.stringify(appData, null, 2)], { type: 'application/json' });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const a = document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>a.href = URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>a.download = 'sparkling-frog-programbook.json';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>a.click();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function importJson(event) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const file = event.target.files[0];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!file) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const reader = new FileReader();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>reader.onload = function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>appData = JSON.parse(e.target.result);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>saveData();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>closeDataModal();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>alert('데이터를 성공적으로 불러왔습니다.');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>alert('올바른 JSON 파일이 아닙니다.');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>reader.readAsText(file);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function resetAllData() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!confirm('모든 수정 내역을 초기화하시겠습니까?')) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>localStorage.removeItem(STORAGE_KEY);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>appData = JSON.parse(JSON.stringify(DEFAULT_DATA));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>closeDataModal();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 모바일 좌우 스와이프 지원</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let touchStartX = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('touchstart', e =&gt; { touchStartX = e.changedTouches[0].screenX; }, { passive: true });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('touchend', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (editMode) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const diff = e.changedTouches[0].screenX - touchStartX;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (Math.abs(diff) &gt; 65) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (diff &lt; 0) nextPage();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else prevPage();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, { passive: true });</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>createSparkles();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderPage();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
